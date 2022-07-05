@@ -58,16 +58,16 @@ responses:
   - text: "Today's temperature in {city} is {temp}°C"
 
   utter_episode_search_result:
-  - text: "I've found this episode: {episode_title}"
+  - text: "I've found this episode: {title} ({website})"
 
   utter_podcast_recommendation:
-  - text: "You should given {podcast_title} a try"
+  - text: "You should given {title} ({website}) a try"
 
   utter_last_updated_podcast_response:
-  - text: "The show {podcast_title} most recently got an update"
+  - text: "The show {title} ({website}) most recently got an update"
 
   utter_subscribed_podcast_response:
-  - text: "The most subscriptions right now has: {podcast_title}"
+  - text: "The most subscriptions right now has {title} ({website}) with {count} subscriptions"
 
 actions:
 - action_weather_api

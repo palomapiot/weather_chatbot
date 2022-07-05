@@ -39,9 +39,11 @@ class ActionSearchPodcast(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         query = tracker.get_slot("search_query")
-        result = search_podcast(query)[0]['attributes']['title']
+        result = search_podcast(query)[0]['attributes']
+        title = result['title']
+        website = result['orig-link']
 
-        dispatcher.utter_message(response="utter_episode_search_result", episode_title=result)
+        dispatcher.utter_message(response="utter_episode_search_result", title=title, website=website)
 
         return []
 
@@ -54,8 +56,10 @@ class ActionRecommendPodcast(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        result = recommend_podcast()[0]['attributes']['title']
-        dispatcher.utter_message(response="utter_podcast_recommendation", podcast_title=result)
+        result = recommend_podcast()[0]['attributes']
+        title = result['title']
+        website = result['website']
+        dispatcher.utter_message(response="utter_podcast_recommendation", title=title, website=website)
 
         return []
 
@@ -68,8 +72,10 @@ class ActionLastUpdatedPodcast(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        result = last_updated_podcast()[0]['attributes']['title']
-        dispatcher.utter_message(response="utter_last_updated_podcast_response", podcast_title=result)
+        result = last_updated_podcast()[0]['attributes']
+        title = result['title']
+        website = result['website']
+        dispatcher.utter_message(response="utter_last_updated_podcast_response", title=title, website=website)
 
         return []
 
@@ -82,8 +88,11 @@ class ActionMostSubscribedPodcast(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        result = most_subscribed_podcast()[0]['attributes']['title']
-        dispatcher.utter_message(response="utter_subscribed_podcast_response", podcast_title=result)
+        result = most_subscribed_podcast()[0]['attributes']
+        title = result['title']
+        website = result['website']
+        count = result['subscriptions-count']
+        dispatcher.utter_message(response="utter_subscribed_podcast_response", title=title, website=website, count=count)
 
         return []
 

@@ -120,6 +120,7 @@ nlu:
     - search for [apple][search_query]
     - I want to know about [gaming](search_query)
     - is there an episode about [cooking](search_query)
+    - can you find anything about [new tv shows](search_query)
 
 - intent: recommend_podcast
   examples: |
