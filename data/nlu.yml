@@ -112,3 +112,31 @@ nlu:
     - can you share the weather forecast today in [Bratislava](city)?
     - do you know the temperature for today in [El Cairo](city)?
     - what is the weather today in [Brussels](city)
+
+- intent: search_podcast
+  examples: |
+    - do you know about a podcast about [programming](search_query)
+    - find me a podcast episode about [agile project management](search_query)
+    - search for [apple][search_query]
+    - I want to know about [gaming](search_query)
+    - is there an episode about [cooking](search_query)
+
+- intent: recommend_podcast
+  examples: |
+    - recommend me a podcast?
+    - can you recommend me a podcast?
+    - what's a good podcast?
+    - do you know any good podcast?
+
+- intent: last_updated_podcast
+  examples: |
+    - which podcast was recently updated?
+    - what's the latest podcast update?
+    - what's the newest podcast?
+    - which podcast got a new episode most recently?
+
+- intent: most_subscribed_podcast
+  examples: |
+    - which podcast has the most subscription?
+    - what's the most subscribed podcast?
+    - what do people subscribe to most?

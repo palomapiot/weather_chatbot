@@ -35,3 +35,31 @@ stories:
   - action: utter_greet
   - intent: weather
   - action: action_weather_api
+
+- story: search podcast
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_podcast
+  - action: action_search_podcast
+
+- story: recommend podcast
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: recommend_podcast
+  - action: action_recommend_podcast
+
+- story: report last updated podcast
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: last_updated_podcast
+  - action: action_last_updated_podcast
+
+- story: report most subscribed podcast
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: most_subscribed_podcast
+  - action: action_most_subscribed_podcast
