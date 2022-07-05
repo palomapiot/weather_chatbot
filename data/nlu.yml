@@ -90,29 +90,6 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: weather
-  examples: |
-    - what's the weather in [London](city)
-    - i want to know the weather for today in [Barcelona](city)
-    - tell me the weather forecast in [Vienna](city)
-    - hows the weather today in [A Coruña](city)
-    - can you tell me the weather in [Madrid](city) today?
-    - i am interested in the forecast in [Sevilla](city) today
-    - could you tell me the weather today in [Rabat](city)?
-    - what is the temperature in [Milos](city) today?
-    - do you know how many degrees are today in [Athens](city)?
-    - i would like to know the forecast in [Rome](city)
-    - tell me the temperature today in [Tokyio](city)
-    - i was wondering what's the forecast for today in [New York](city)
-    - i would be interested in the degrees today in [Paris](city)
-    - i was wondering what is the forecast prediction for today in [Milano](city)
-    - may i know what is the weather for today in [Budapest](city)?
-    - weather today in [Helsinki](city) please
-    - is it going to be hot today in [La Habana](city)?
-    - can you share the weather forecast today in [Bratislava](city)?
-    - do you know the temperature for today in [El Cairo](city)?
-    - what is the weather today in [Brussels](city)
-
 - intent: search_podcast
   examples: |
     - do you know about a podcast about [programming](search_query)

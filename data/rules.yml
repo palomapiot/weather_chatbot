@@ -11,12 +11,7 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
-
-- rule: Show forecast anytime the user asks for it
-  steps:
-  - intent: weather
-  - action: action_weather_api
-
+  
 - rule: Search for podcast episode if user wan't to know about a specific term
   steps:
   - intent: search_podcast
