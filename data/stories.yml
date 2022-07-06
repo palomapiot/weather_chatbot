@@ -2,36 +2,30 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: search podcast
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: search_podcast
+  - action: action_search_podcast
 
-- story: sad path 1
+- story: recommend podcast
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: recommend_podcast
+  - action: action_recommend_podcast
 
-- story: sad path 2
+- story: report last updated podcast
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: last_updated_podcast
+  - action: action_last_updated_podcast
 
-- story: weather
+- story: report most subscribed podcast
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: weather
-  - action: action_weather_api
+  - intent: most_subscribed_podcast
+  - action: action_most_subscribed_podcast

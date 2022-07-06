@@ -8,18 +8,21 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - weather
+  - search_podcast
+  - recommend_podcast
+  - last_updated_podcast
+  - most_subscribed_podcast
 
 entities:
-  - city
+  - search_query
 
 slots:
-  city:
+  search_term:
     type: rasa.shared.core.slots.AnySlot
     initial_value: null
     influence_conversation: false
     mappings:
-    - entity: city
+    - entity: search_query
       type: from_entity
 
 responses:
@@ -42,11 +45,23 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
-  utter_weather:
-  - text: "Today's temperature in {city} is {temp}°C"
+  utter_episode_search_result:
+  - text: "I've found this episode: {title} ({website})"
+
+  utter_podcast_recommendation:
+  - text: "You should given {title} ({website}) a try"
+
+  utter_last_updated_podcast_response:
+  - text: "The show {title} ({website}) most recently got an update"
+
+  utter_subscribed_podcast_response:
+  - text: "The most subscriptions right now has {title} ({website}) with {count} subscriptions"
 
 actions:
-- action_weather_api
+- action_search_podcast
+- action_recommend_podcast
+- action_last_updated_podcast
+- action_most_subscribed_podcast
 
 session_config:
   session_expiration_time: 60

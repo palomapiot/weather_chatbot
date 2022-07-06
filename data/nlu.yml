@@ -90,25 +90,31 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: weather
+- intent: search_podcast
   examples: |
-    - what's the weather in [London](city)
-    - i want to know the weather for today in [Barcelona](city)
-    - tell me the weather forecast in [Vienna](city)
-    - hows the weather today in [A Coruña](city)
-    - can you tell me the weather in [Madrid](city) today?
-    - i am interested in the forecast in [Sevilla](city) today
-    - could you tell me the weather today in [Rabat](city)?
-    - what is the temperature in [Milos](city) today?
-    - do you know how many degrees are today in [Athens](city)?
-    - i would like to know the forecast in [Rome](city)
-    - tell me the temperature today in [Tokyio](city)
-    - i was wondering what's the forecast for today in [New York](city)
-    - i would be interested in the degrees today in [Paris](city)
-    - i was wondering what is the forecast prediction for today in [Milano](city)
-    - may i know what is the weather for today in [Budapest](city)?
-    - weather today in [Helsinki](city) please
-    - is it going to be hot today in [La Habana](city)?
-    - can you share the weather forecast today in [Bratislava](city)?
-    - do you know the temperature for today in [El Cairo](city)?
-    - what is the weather today in [Brussels](city)
+    - do you know about a podcast about [programming](search_query)
+    - find me a podcast episode about [agile project management](search_query)
+    - search for [apple][search_query]
+    - I want to know about [gaming](search_query)
+    - is there an episode about [cooking](search_query)
+    - can you find anything about [new tv shows](search_query)
+
+- intent: recommend_podcast
+  examples: |
+    - recommend me a podcast?
+    - can you recommend me a podcast?
+    - what's a good podcast?
+    - do you know any good podcast?
+
+- intent: last_updated_podcast
+  examples: |
+    - which podcast was recently updated?
+    - what's the latest podcast update?
+    - what's the newest podcast?
+    - which podcast got a new episode most recently?
+
+- intent: most_subscribed_podcast
+  examples: |
+    - which podcast has the most subscription?
+    - what's the most subscribed podcast?
+    - what do people subscribe to most?

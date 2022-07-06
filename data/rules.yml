@@ -11,8 +11,23 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
-
-- rule: Show forecast anytime the user asks for it
+  
+- rule: Search for podcast episode if user wan't to know about a specific term
   steps:
-  - intent: weather
-  - action: action_weather_api
+  - intent: search_podcast
+  - action: action_search_podcast
+
+- rule: Recommend a random podcast if the user asks for it
+  steps:
+  - intent: recommend_podcast
+  - action: action_recommend_podcast
+
+- rule: Show podcast with the most recent update if the user ask for it
+  steps:
+  - intent: last_updated_podcast
+  - action: action_last_updated_podcast
+
+- rule: Show podcasts with most subscriptions if the user asks fo it
+  steps:
+  - intent: most_subscribed_podcast
+  - action: action_most_subscribed_podcast
